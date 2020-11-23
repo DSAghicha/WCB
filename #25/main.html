@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCB #25</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <span><img src="./images/logo.png" alt="logo" width="120px"></span>
+        <span id="heading">Weekly Code Battle Week 25</span>
+    </header>
+    <main>
+
+        <div class="container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#CA8211" width="96px" height="96px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+            </svg>
+            <h1>Fichier Protégé</h1>
+            <form action="get" name="f1">
+                <div class="passe_container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#CA8211" width="18px" height="18px">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M12.65 10C11.7 7.31 8.9 5.5 5.77 6.12c-2.29.46-4.15 2.29-4.63 4.58C.32 14.57 3.26 18 7 18c2.61 0 4.83-1.67 5.65-4H17v2c0 1.1.9 2 2 2s2-.9 2-2v-2c1.1 0 2-.9 2-2s-.9-2-2-2h-8.35zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                    </svg>
+                    <input type="password" name="passe" id="passe" placeholder="Entrez mot de passe pour continuer">
+                    <span class="eye">
+                        <svg id="montrer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#CA8211"
+                            width="18px" height="18px">
+                            <path d="M0 0h24v24H0V0z" fill="none" />
+                            <path
+                                d="M12 6c3.79 0 7.17 2.13 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5C4.83 8.13 8.21 6 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5c1.38 0 2.5 1.12 2.5 2.5S13.38 14 12 14s-2.5-1.12-2.5-2.5S10.62 9 12 9m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z" />
+                        </svg>
+                        <svg id="cacher" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="#CA8211" width="18px" height="18px">
+                            <path d="M0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
+                            <path
+                                d="M12 6c3.79 0 7.17 2.13 8.82 5.5-.59 1.22-1.42 2.27-2.41 3.12l1.41 1.41c1.39-1.23 2.49-2.77 3.18-4.53C21.27 7.11 17 4 12 4c-1.27 0-2.49.2-3.64.57l1.65 1.65C10.66 6.09 11.32 6 12 6zm-1.07 1.14L13 9.21c.57.25 1.03.71 1.28 1.28l2.07 2.07c.08-.34.14-.7.14-1.07C16.5 9.01 14.48 7 12 7c-.37 0-.72.05-1.07.14zM2.01 3.87l2.68 2.68C3.06 7.83 1.77 9.53 1 11.5 2.73 15.89 7 19 12 19c1.52 0 2.98-.29 4.32-.82l3.42 3.42 1.41-1.41L3.42 2.45 2.01 3.87zm7.5 7.5l2.61 2.61c-.04.01-.08.02-.12.02-1.38 0-2.5-1.12-2.5-2.5 0-.05.01-.08.01-.13zm-3.4-3.4l1.75 1.75c-.23.55-.36 1.15-.36 1.78 0 2.48 2.02 4.5 4.5 4.5.63 0 1.23-.13 1.77-.36l.98.98c-.88.24-1.8.38-2.75.38-3.79 0-7.17-2.13-8.82-5.5.7-1.43 1.72-2.61 2.93-3.53z" />
+                        </svg>
+                    </span>
+                </div>
+                <input type="button" value="Continuer">
+            </form>
+        </div>
+    </main>
+
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript">
+        const eyeBox = document.querySelector(".eye");
+        let showPasse = false;
+        eyeBox.addEventListener('click', () => {
+            const passe = document.getElementById("passe");
+            const montrer = document.getElementById('montrer').classList;
+            const cacher = document.getElementById('cacher').classList;
+            if (showPasse) {
+                passe.setAttribute("type", "password");
+                cacher.add("hidden")
+                montrer.remove("hidden")
+            } else {
+                passe.setAttribute("type", "text");
+                cacher.remove("hidden")
+                montrer.add("hidden")
+            }
+            showPasse = !showPasse;
+            console.log("Clicked!")
+
+        })
+    </script>
+</body>
+
+</html>
