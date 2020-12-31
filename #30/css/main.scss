@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+$calligraphy: 'Italianno',
+cursive;
+$cursive: 'Redressed'; // , cursive
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    //overflow: hidden;
+    background-color: #590000;
+    color: wheat;
+    .main {
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle at center, #800000, #000);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-win {
+        display: block;
+        width: 330px;
+        height: 450px;
+        padding: 30px 35px 35px 35px;
+        border-radius: 16px;
+        background-color: #590000;
+        box-shadow: 13px 13px 20px #800 -13px -13px -13px #000;
+        .logo {
+            box-shadow: 0px 0px 2px #5f5f5f;
+        }
+        .form-container {
+            display: flex;
+            width: 100%;
+            padding: 10px 5px 5px 5px;
+            input,
+            textarea,
+            select {
+                width: 100%;
+                border: none;
+                background: none;
+                outline: none;
+                color: wheat;
+                font-size: 16px;
+                margin-bottom: 5px;
+                font-family: $cursive, cursive;
+                border-radius: 10px;
+                border-bottom: 2px solid #800000;
+            }
+            option {
+                background: #590000;
+            }
+            input[type="button"] {
+                background-color: #800000;
+                margin-top: 10px;
+                height: 40px;
+                transition: ease-in-out 1s;
+                cursor: pointer;
+                &:hover {
+                    background-color: wheat;
+                    color: #590000;
+                }
+            }
+        }
+    }
+    label {
+        color: wheat;
+        font-family: $cursive, cursive;
+    }
+    .generating {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        .preloader {
+            width: 15rem;
+            height: 15rem;
+            display: grid;
+            place-items: center;
+            border-right: 0.3rem solid wheat;
+            border-radius: 50%;
+            animation: preload 2s linear infinite;
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: $cursive, cursive;
+            color: wheat;
+        }
+    }
+    .display-id {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        #home {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .id-container {
+            position: relative;
+            width: 650px;
+            height: 450px;
+            padding: 30px 35px 35px 35px;
+            border-radius: 16px;
+            background-color: #590000;
+            box-shadow: 13px 13px 20px #800 -13px -13px -13px #000;
+            display: flex;
+            #front-bg {
+                position: absolute;
+                top: 41px;
+                left: 16px;
+            }
+            #front-face,
+            #back-face {
+                cursor: pointer;
+                font-family: $calligraphy;
+                width: 290px;
+                height: 440px;
+                border-radius: 5px;
+                background: url(../img/card-body.png);
+            }
+            #front-face {
+                position: absolute;
+                left: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFF;
+                color: #590000;
+                #pic-container {
+                    position: absolute;
+                    top: 145px;
+                    left: 90px;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                #name-cr {
+                    font-size: 35px;
+                    position: absolute;
+                    top: 240px;
+                    left: 50px;
+                }
+                #phone-cr,
+                #id-cr {
+                    font-size: 30px;
+                    position: absolute;
+                }
+                #id {
+                    position: relative;
+                    left: 27px;
+                }
+                #id-cr {
+                    top: 280px;
+                    left: 20px;
+                }
+                #phone-cr {
+                    top: 300px;
+                    left: 20px;
+                }
+                .colon {
+                    position: relative;
+                    left: 25px;
+                }
+                #qr-container {
+                    position: absolute;
+                    left: 90px;
+                    bottom: 20px;
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+            #back-face {
+                position: absolute;
+                left: 300px;
+                display: flex;
+                background-color: #FFF;
+                position: relative;
+                .container {
+                    background: url(../img/download.jpg);
+                    width: 259px;
+                    height: 384px;
+                    position: relative;
+                    top: 42px;
+                    left: 16px;
+                    display: block;
+                    img {
+                        position: relative;
+                        top: 5px;
+                        left: 90px;
+                    }
+                    #dob-cr,
+                    #bg-cr,
+                    #address-cr {
+                        font-size: 25px;
+                        margin-left: 10px;
+                    }
+                    #address-display {
+                        font-size: 14px;
+                    }
+                    .instructions {
+                        margin-top: 12px;
+                        margin-left: 20px;
+                        ul {
+                            list-style: '-';
+                            li {
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+                    .com-add {
+                        font-size: 20px;
+                        background-color: #590000;
+                        position: relative;
+                        bottom: -16px;
+                        left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes preload {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

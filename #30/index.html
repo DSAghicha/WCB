@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <section class="form-win" id='form-section'>
+            <div class="logo"><img src="./img/logo.png" width="300px" alt=""></div>
+            <div class="form-container">
+                <form name="info" action="get" name='details' autocomplete="off">
+                    <label for="name">Enter your name:</label><br>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="dob">Select Date of Birth</label>
+                    <input type="date" name="dob" id="dob" data-date-format="dd.mm.YYYY"><br>
+                    <label for="bloodgrp">Select Blood Group</label>
+                    <select name="bloodgrp" id="bloodgrp">
+                        <option value=""></option>
+                        <option value="">A+</option>
+                        <option value="">A-</option>
+                        <option value="">B+</option>
+                        <option value="">B-</option>
+                        <option value="">AB+</option>
+                        <option value="">AB-</option>
+                        <option value="">O+</option>
+                        <option value="">O-</option>
+                    </select><br>
+                    <label for="mobnum">Enter mobile number:</label><br>
+                    <input type="number" name="mobnum" id="mobnum" maxlength="10"><br>
+                    <label for="address">Enter Current Address:</label><br>
+                    <textarea name="address" id="address" cols="30" rows="3"></textarea><br>
+                    <label for="pic">Select your picture:</label><br>
+                    <input type="file" name="pic" id="pic"><br>
+                    <input type="button" id="generate" value="Generate ID"><br>
+                </form>
+            </div>
+        </section>
+        <section class="generating" id='transit'>
+            <div class="preloader">
+            </div>
+            <h1>Generating...</h1>
+        </section>
+        <section class="display-id" id="idInfo">
+            <svg id="home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F5DEB3" width="36px" height="36px">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            <div class="id-container">
+                <div class="front" id="front-face">
+                    <img src="./img/front-bg.png" width="259px" alt="front-bg" id="front-bg">
+                    <div id="pic-container"></div>
+                    <span id="name-cr"></span>
+                    <p id="id-cr">ID No.<span class="colon">:</span><span id="id">9999999999</span></p>
+                    <p id="phone-cr">Phone No.:</span><span id="phone">999 999 9999</span></p>
+                    <canvas id="qr-container"></canvas>
+                </div>
+                <div class="back" id="back-face">
+                    <div class="container">
+                        <img src="./img/logo_back.png" alt="kaleen">
+                        <p id="dob-cr">Date of Birth: <span id="dob-display">01.01.1980</span></p>
+                        <p id="bg-cr">Blood Group: <span id="bg-display">O-</span></p>
+                        <p id="address-cr">Address: <br><span id="address-display">14th Avenue Street,
+                                Jaslok Nagar, UP 110206 </span></p>
+                        <div class="instructions">
+                            <ul id="info-panel">
+                                <li>This card is non-transferable.</li>
+                                <li>Always carry your card during office hours.</li>
+                                <li>In case of loss, inform HR.</li>
+                                <li>If found, please return it to the given address.</li>
+                            </ul>
+                        </div>
+                        <div class="com-add">
+                            <p>Avash Vikas Colony,<br>Mirzapur, UP 231001</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </div>
+    </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
