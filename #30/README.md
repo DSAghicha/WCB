@@ -17,4 +17,15 @@ You are Akhandanand Satyanand Tripathi who is referred to as "Kaleen Bhaiya '' a
 7. Picture of the Person
 8. **QR Code** which will contain all the above information so that you can share the information Just by scanning it.
 
-[Submit](https://forms.gle/5M6S33Jc1USh7csbA)
+## Screens
+#### Input Screen
+![image](https://user-images.githubusercontent.com/53931676/103426337-bff10a00-4bde-11eb-9599-996235c679f2.png)
+
+#### Transit Screen
+![image](https://user-images.githubusercontent.com/53931676/103426354-d4350700-4bde-11eb-8dea-6ed6ba8c96fb.png)
+
+#### Output Screen
+![image](https://user-images.githubusercontent.com/53931676/103426404-4d345e80-4bdf-11eb-8033-ca3101967713.png)
+
+#### QR Code Scan Result
+<img src= "https://user-images.githubusercontent.com/53931676/103426554-596ceb80-4be0-11eb-9173-0355729549ff.jpg" alt= "qrresult" height= "360px">
